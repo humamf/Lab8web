@@ -1,0 +1,39 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+table, th, tr, td{
+    border: 1px solid;
+    padding: 5px;
+}
+
+.input label{
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+}
+
+.input ipnut[type="text"], form textarea{ 
+    height: 10px;
+    border: 1px solid rgb(104, 255, 104);
+}
+
+.submit input{
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: rgb(1, 67, 247);
+    margin: 5px;
+    color: white;
+    padding: 7px 14px;
+    margin-left: 100px;
+}
+
+.submit input:hover{
+    background-color: rgb(1, 67, 247);
+}
+
