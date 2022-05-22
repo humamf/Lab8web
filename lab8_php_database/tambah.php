@@ -9,7 +9,7 @@ if (isset($_POST['submit']))
     $harga_jual = $_POST['harga_jual'];
     $harga_beli = $_POST['harga_beli'];
     $stok = $_POST['stok'];
-    $file_gambar = $_POST['file_gambar'];
+    $file_gambar = $_FILES['file_gambar'];
     $gambar = null;
     if ($file_gambar['error'] == 0)
     {
