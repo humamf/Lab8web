@@ -17,14 +17,14 @@ if (isset($_POST['submit']))
         $destination = dirname(__FILE__) .'/gambar/' . $filename;
         if(move_uploaded_file($file_gambar['tmp_name'], $destination))
         {
-            $gambar = '/gambar/' . $filename;;
+            $gambar = 'gambar/' . $filename;;
         }
     }
     $sql = 'INSERT INTO data_barang (nama, kategori, harga_jual, harga_beli, stok, gambar) ';
     $sql .= "VALUE ('{$nama}', '{$kategori}','{$harga_jual}', 
     '{$harga_beli}', '{$stok}', '{$gambar}')";
-    $result = mysqli_query($conn, $sql);
-    header('location: index.php');
+        $result = mysqli_query($conn, $sql);
+        header('location: index.php');
 }
 ?>
 

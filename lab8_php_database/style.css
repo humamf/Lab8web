@@ -25,8 +25,8 @@ table, th, tr, td{
 
 .submit input{
     border: 1px solid;
-    border-radius: 5px;
-    background-color: rgb(1, 67, 247);
+    border-radius: 0px;
+    background-color: rgb(1, 17, 59);
     margin: 5px;
     color: white;
     padding: 7px 14px;
@@ -34,6 +34,6 @@ table, th, tr, td{
 }
 
 .submit input:hover{
-    background-color: rgb(1, 67, 247);
+    background-color: rgb(0, 40, 151);
 }
 
