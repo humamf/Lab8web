@@ -34,12 +34,17 @@ if (isset($_POST['submit']))
     header('location: index.php');
 }
 
-// $id = $_GET['id'];
-$id = (isset($_POST['id']) ? $_POST['id'] : '');
+$id = $_GET['id'];
+// $id = (isset($_POST['id']) ? $_POST['id'] : '');
 $sql = "SELECT * FROM data_barang WHERE id_barang = '{$id}'";
 $result = mysqli_query($conn, $sql);
-if (!$result) die('Error: Data tidak tersedia');
+// if (!$result) die('Error: Data tidak tersedia');
 $data = mysqli_fetch_array($result);
+
+if ($data == NULL) {
+    
+    header('location:index.php');
+}
 
 function is_select($var, $val) {
     if ($var == $val) return 'selected="selected"';

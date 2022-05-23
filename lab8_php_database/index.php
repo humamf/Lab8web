@@ -5,6 +5,7 @@ include("koneksi.php");
 $sql = 'SELECT * FROM data_barang';
 $result = mysqli_query($conn, $sql);
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +18,7 @@ $result = mysqli_query($conn, $sql);
 </head>
 <body>
     <div class="container">
+      
         <h1>Data Barang</h1>
         <div class="main">
             <a href="tambah.php">Tambah Barang</a>
