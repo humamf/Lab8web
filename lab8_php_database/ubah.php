@@ -25,7 +25,7 @@ if (isset($_POST['submit']))
 
     $sql = 'UPDATE data_barang SET ';
     $sql .= "nama = '{$nama}', kategori = '{$kategori}', ";
-    $sql .= "harga_jual = '{$harga_jual}', harga_beli = '{$harga_beli}', stok = '{$stok}' ";
+    $sql .= "harga_jual = '{$harga_jual}', harga_beli = '{$harga_beli}', stok= '{$stok}' ";
     if (!empty($gambar))
         $sql .= ", gambar = '{$gambar}' ";
     $sql .= "WHERE id_barang = '{$id}'";
@@ -36,7 +36,7 @@ if (isset($_POST['submit']))
 
 // $id = $_GET['id'];
 $id = (isset($_POST['id']) ? $_POST['id'] : '');
-$sql = "SELECT * FROM data_barang WHERE id_barang = '{$id}'" ;
+$sql = "SELECT * FROM data_barang WHERE id_barang = '{$id}'";
 $result = mysqli_query($conn, $sql);
 if (!$result) die('Error: Data tidak tersedia');
 $data = mysqli_fetch_array($result);
@@ -62,11 +62,11 @@ function is_select($var, $val) {
         <div class="main">
         <form method="post" action="ubah.php" enctype="multipart/form-data">
             <div class="input">
-                <label>Nama Barang: </label>
+                <label>Nama Barang : </label>
                 <input type="text" name="nama" value="<?php echo $data['nama'];?>" />
             </div>
             <div class="input">
-                <label>Kategori: </label>
+                <label>Kategori : </label>
                 <select name="kategori">
                     <option <?php echo is_select
                     ('Komputer', $data['kategori']);?> value="Komputer">Komputer</option>
@@ -77,23 +77,23 @@ function is_select($var, $val) {
                 </select>
             </div>
             <div class="input">
-                <label>Harga Jual: </label>
+                <label>Harga Jual : </label>
                 <input type="text" name="harga_jual" value="<?php echo $data['harga_jual'];?>" />
             </div>
             <div class="input">
-                <label>Harga Beli: </label>
+                <label>Harga Beli : </label>
                 <input type="text" name="harga_beli" value="<?php echo $data['harga_beli'];?>" />
             </div>
             <div class="input">
-                <label>Stok: </label>
+                <label>Stok : </label>
                 <input type="text" name="stok" value="<?php echo $data['stok'];?>" />
             </div>
             <div class="input">
-                <label>File Gambar: </label>
-                <input type="file" name="file_gambar" value="<?php echo $data['file_gambar'];?>" />
+                <label>File Gambar : </label>
+                <input type="file" name="file_gambar" />
             </div>
             <div class="submit">
-                <input type="hidden" name="id" value="<?php echo $data['id_barang'];?>" />
+            <input type="hidden" name="id" value="<?php echo $data['id_barang'];?>" />
                 <input type="submit" name="submit" value="Simpan" />
             </div>
         </form>

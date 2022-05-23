@@ -6,7 +6,6 @@ $sql = 'SELECT * FROM data_barang';
 $result = mysqli_query($conn, $sql);
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,14 +26,14 @@ $result = mysqli_query($conn, $sql);
                     <th>Nama Barang</th>
                     <th>Kategori</th>
                     <th>Harga Jual</th>
-                    <th>harga Beli</th>
+                    <th>Harga Beli</th>
                     <th>Stok</th>
                     <th>Aksi</th>
                 </tr>
             <?php if($result): ?>
             <?php while($row = mysqli_fetch_array($result)): ?>
                 <tr>
-                    <td><img src="gambar/<?=$row['gambar'];?>" alt="<?=$row['nama'];?>"></td>
+                    <td><img src="gambar/<?= $row['gambar'];?>" alt="<?=$row['nama'];?>"></td>
                     <td><?= $row['nama'];?></td>    
                     <td><?= $row['kategori'];?></td>    
                     <td><?= $row['harga_beli'];?></td>    

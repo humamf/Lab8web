@@ -5,9 +5,10 @@ body{
 
 table{
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
-table, th, tr, td{
+th, tr, td{
     border: 1px solid;
     padding: 5px;
 }
@@ -18,15 +19,15 @@ table, th, tr, td{
     padding: 10px;
 }
 
-.input ipnut[type="text"], form textarea{ 
-    height: 10px;
-    border: 1px solid rgb(104, 255, 104);
+.input input[type="text"], form textarea{
+    border-radius: 3px;
+    border: 1px solid rgb(2, 69, 238);
 }
 
 .submit input{
     border: 1px solid;
-    border-radius: 0px;
-    background-color: rgb(1, 17, 59);
+    border-radius: 5px;
+    background-color: rgb(2, 69, 238);
     margin: 5px;
     color: white;
     padding: 7px 14px;
